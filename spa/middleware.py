@@ -13,7 +13,7 @@ class SPAMiddleware(WhiteNoiseMiddleware):
     with frontend routing on /
 
     """
-    index_name = 'static/index.html'
+    index_name = settings.STATIC_URL + 'index.html'
 
     def process_request(self, request):
         # First try to serve the static files (on /static/ and on /)
